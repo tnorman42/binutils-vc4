@@ -1,5 +1,5 @@
 
-.include "../vctools/vcregs.inc"
+.include "../../vctools/vcregs.inc"
 	
 	.equ TARGET_BAUD_RATE, 115200
 	.equ SYSTEM_CLOCK, 19200000
