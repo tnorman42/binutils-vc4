@@ -2,7 +2,7 @@
 # Configuration validation subroutine script.
 #   Copyright 1992-2013 Free Software Foundation, Inc.
 
-timestamp='2013-10-01'
+timestamp='2014-10-04'
 
 # This file is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -1191,6 +1191,10 @@ case $basic_machine in
 	vaxv)
 		basic_machine=vax-dec
 		os=-sysv
+		;;
+    	vc4)
+		basic_machine=vc4-unknown
+		os=-elf
 		;;
 	vms)
 		basic_machine=vax-dec

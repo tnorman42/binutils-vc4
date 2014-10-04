@@ -91,6 +91,7 @@
 #define ARCH_tilepro
 #define ARCH_v850
 #define ARCH_vax
+#define ARCH_vc4
 #define ARCH_w65
 #define ARCH_xstormy16
 #define ARCH_xc16x
@@ -501,6 +502,11 @@ disassembler (abfd)
 #ifdef ARCH_frv
     case bfd_arch_frv:
       disassemble = print_insn_frv;
+      break;
+#endif
+#ifdef ARCH_vc4
+    case bfd_arch_vc4:
+      disassemble = print_insn_vc4;
       break;
 #endif
 #ifdef ARCH_moxie

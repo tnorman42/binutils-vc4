@@ -148,6 +148,7 @@
 #include "elf/tilepro.h"
 #include "elf/v850.h"
 #include "elf/vax.h"
+#include "elf/vc4.h"
 #include "elf/x86-64.h"
 #include "elf/xc16x.h"
 #include "elf/xgate.h"
@@ -1229,6 +1230,10 @@ dump_relocations (FILE * file,
 
 	case EM_VAX:
 	  rtype = elf_vax_reloc_type (type);
+	  break;
+
+	case EM_VIDEOCORE3:
+	  rtype = elf_vc4_reloc_type (type);
 	  break;
 
 	case EM_ADAPTEVA_EPIPHANY:
@@ -10307,6 +10312,8 @@ is_32bit_abs_reloc (unsigned int reloc_type)
       return reloc_type == 0x33; /* R_V810_WORD.  */
     case EM_VAX:
       return reloc_type == 1; /* R_VAX_32.  */
+    case EM_VIDEOCORE3:
+      return reloc_type == 23; /* R_VC4_32. */
     case EM_X86_64:
     case EM_L1OM:
     case EM_K1OM:

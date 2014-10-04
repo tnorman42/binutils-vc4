@@ -133,7 +133,7 @@ void print_fixup (fixS *);
 /* We generally attach relocs to frag chains.  However, after we have
    chained these all together into a segment, any relocs we add after
    that must be attached to a segment.  This will include relocs added
-   in md_estimate_size_for_relax, for example.  */
+   in md_estimate_size_before_relax, for example.  */
 static int frags_chained = 0;
 
 static int n_fixups;
